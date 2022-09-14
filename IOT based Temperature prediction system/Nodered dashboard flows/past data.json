@@ -1,0 +1,260 @@
+[
+    {
+        "id": "06ad2f35803f27a6",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "31a69b9f8be45784",
+        "type": "inject",
+        "z": "06ad2f35803f27a6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "SELECT dt,AverageTemperature,AverageTemperatureUncertainty FROM iot.export_dataframe;",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 220,
+        "wires": [
+            [
+                "75d3cead8bbdfe65"
+            ]
+        ]
+    },
+    {
+        "id": "75d3cead8bbdfe65",
+        "type": "mysql",
+        "z": "06ad2f35803f27a6",
+        "mydb": "c770f871214e2b46",
+        "name": "",
+        "x": 370,
+        "y": 220,
+        "wires": [
+            [
+                "88f2250cdc39c799",
+                "84806876b3e57647",
+                "6e1ff0527f795c8e"
+            ]
+        ]
+    },
+    {
+        "id": "88f2250cdc39c799",
+        "type": "debug",
+        "z": "06ad2f35803f27a6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "84806876b3e57647",
+        "type": "change",
+        "z": "06ad2f35803f27a6",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[\t   {\t       \"series\": [\"AverageTemperature\"],\t       \"labels\": [\"AverageTemperature\"],\t       \"data\": [\t           [\t               payload.{\t                   \"x\": $.\"dt\",\t                   \"y\": $.\"AverageTemperature\"\t    }\t           ]\t       ]\t}\t]",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 240,
+        "wires": [
+            [
+                "23a73538635c39ea",
+                "3197a74ce29d7418"
+            ]
+        ]
+    },
+    {
+        "id": "23a73538635c39ea",
+        "type": "debug",
+        "z": "06ad2f35803f27a6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "3197a74ce29d7418",
+        "type": "ui_chart",
+        "z": "06ad2f35803f27a6",
+        "name": "",
+        "group": "01862c4cddeddbda",
+        "order": 0,
+        "width": "10",
+        "height": "5",
+        "label": "Past Temparature Data",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#8a2c96",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#654186",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 850,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6e1ff0527f795c8e",
+        "type": "change",
+        "z": "06ad2f35803f27a6",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[{\t    \"series\": [\"AverageTemperatureUncertainty\"],\t    \"labels\": [\"AverageTemperatureUncertainty\"],\t    \"data\": [[payload.{\t        \"x\": dt,\t        \"y\": $.\"AverageTemperatureUncertainty\"\t    }]]\t}]",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 340,
+        "wires": [
+            [
+                "91f8b23c54d047b8"
+            ]
+        ]
+    },
+    {
+        "id": "91f8b23c54d047b8",
+        "type": "ui_chart",
+        "z": "06ad2f35803f27a6",
+        "name": "",
+        "group": "01862c4cddeddbda",
+        "order": 0,
+        "width": "10",
+        "height": "5",
+        "label": "Past Temparature Uncertainty Data",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#3bb922",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 880,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c770f871214e2b46",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "iot",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "01862c4cddeddbda",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "039739a627e19447",
+        "order": 1,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "039739a627e19447",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]

@@ -1,0 +1,560 @@
+[
+    {
+        "id": "a6ae8821bc818dba",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c8f22252b9a796d2",
+        "type": "tab",
+        "label": "Flow 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "94b16e948f47b4db",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "iot_assign",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "b28a35a4bd57313c",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "fd4ed77eb6205522",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "24ff73a824e573f3",
+        "type": "ui_group",
+        "name": "Future",
+        "tab": "b28a35a4bd57313c",
+        "order": 2,
+        "disp": true,
+        "width": "11",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3f1386f71235e54b",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "test-client",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "3acba131ec21e558",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "iot_assign",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "4d2cabe1ebda0fe0",
+        "type": "ui_group",
+        "name": "Home",
+        "tab": "46863f8f836ac8fc",
+        "order": 2,
+        "disp": true,
+        "width": "11",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "46863f8f836ac8fc",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "354eb6ff706454b5",
+        "type": "ui_group",
+        "name": "Past",
+        "tab": "b28a35a4bd57313c",
+        "order": 3,
+        "disp": true,
+        "width": "11",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ca9568764d3715cd",
+        "type": "ui_group",
+        "name": "Present",
+        "tab": "b28a35a4bd57313c",
+        "order": 1,
+        "disp": true,
+        "width": "22",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5107dba3e7e6dcae",
+        "type": "mqtt in",
+        "z": "a6ae8821bc818dba",
+        "name": "",
+        "topic": "Group_21/Temp",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "3f1386f71235e54b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 280,
+        "y": 220,
+        "wires": [
+            [
+                "400c03fac96211dc",
+                "dccc8592b7529062",
+                "faa07c6bb84e0e15"
+            ]
+        ]
+    },
+    {
+        "id": "400c03fac96211dc",
+        "type": "ui_gauge",
+        "z": "a6ae8821bc818dba",
+        "name": "",
+        "group": "ca9568764d3715cd",
+        "order": 2,
+        "width": "11",
+        "height": "7",
+        "gtype": "gage",
+        "title": "Ambient Temperature",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 600,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "dccc8592b7529062",
+        "type": "ui_chart",
+        "z": "a6ae8821bc818dba",
+        "name": "",
+        "group": "ca9568764d3715cd",
+        "order": 0,
+        "width": "11",
+        "height": "7",
+        "label": "Ambient Temperature Chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#8e0b76",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 600,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "faa07c6bb84e0e15",
+        "type": "debug",
+        "z": "a6ae8821bc818dba",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "9039f8ea0cf1d2c8",
+        "type": "inject",
+        "z": "c8f22252b9a796d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "SELECT date,AverageTemperature,AverageTemperatureUncertainty FROM iot_assign.pastdata;",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 140,
+        "wires": [
+            [
+                "92a8ff48a854be4b"
+            ]
+        ]
+    },
+    {
+        "id": "92a8ff48a854be4b",
+        "type": "mysql",
+        "z": "c8f22252b9a796d2",
+        "mydb": "3acba131ec21e558",
+        "name": "pastdata",
+        "x": 300,
+        "y": 140,
+        "wires": [
+            [
+                "3f9c2ba451e5824c"
+            ]
+        ]
+    },
+    {
+        "id": "23efc126bf63eba6",
+        "type": "ui_chart",
+        "z": "c8f22252b9a796d2",
+        "name": "",
+        "group": "354eb6ff706454b5",
+        "order": 0,
+        "width": "11",
+        "height": "5",
+        "label": "Past Temperature Data",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "Y-M-D",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#00c23a",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#f02828",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 810,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3f9c2ba451e5824c",
+        "type": "change",
+        "z": "c8f22252b9a796d2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[\t   {\t       \"series\": [\"AverageTemperature\"],\t       \"labels\": [\"AverageTemperature\"],\t       \"data\": [\t           [\t               payload.{\t                   \"x\": $.\"date\",\t                   \"y\": $.\"AverageTemperature\"\t    }\t           ]\t       ]\t}\t]",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 180,
+        "wires": [
+            [
+                "23efc126bf63eba6"
+            ]
+        ]
+    },
+    {
+        "id": "3d438d2769695b9e",
+        "type": "inject",
+        "z": "c8f22252b9a796d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "SELECT * FROM iot_assign.future2;",
+        "payload": "",
+        "payloadType": "date",
+        "x": 73,
+        "y": 274,
+        "wires": [
+            [
+                "48cd09379e967af4"
+            ]
+        ]
+    },
+    {
+        "id": "48cd09379e967af4",
+        "type": "mysql",
+        "z": "c8f22252b9a796d2",
+        "mydb": "3acba131ec21e558",
+        "name": "futuredata",
+        "x": 320,
+        "y": 300,
+        "wires": [
+            [
+                "0ca7a642819901e7"
+            ]
+        ]
+    },
+    {
+        "id": "a7bf27a4144e321f",
+        "type": "ui_chart",
+        "z": "c8f22252b9a796d2",
+        "name": "",
+        "group": "24ff73a824e573f3",
+        "order": 0,
+        "width": "11",
+        "height": "5",
+        "label": "Future Temperature Data",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "Y-M-D",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#5b21fd",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#f02828",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 773,
+        "y": 314,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0ca7a642819901e7",
+        "type": "change",
+        "z": "c8f22252b9a796d2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[\t   {\t       \"series\": [\"AverageTemperature\"],\t       \"labels\": [\"AverageTemperature\"],\t       \"data\": [\t           [\t               payload.{\t                   \"x\": $.\"Date\",\t                   \"y\": $.\"future_pred\"\t    }\t           ]\t       ]\t}\t]",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 553,
+        "y": 314,
+        "wires": [
+            [
+                "a7bf27a4144e321f"
+            ]
+        ]
+    }
+]

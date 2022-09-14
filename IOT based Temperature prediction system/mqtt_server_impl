@@ -1,0 +1,12 @@
+
+import paho.mqtt.client as paho
+from paho import mqtt
+broker = "broker.hivemq.com"
+ports = 1883
+topic = "IT19241906"
+
+client = paho.Client(client_id="", userdata=None, protocol=paho.MQTTv5)
+client.connect(broker, ports)
+
+while True:
+    client.publish(topic, payload= 25.0, qos=1)
